@@ -12,42 +12,53 @@ export function Container({
   )
 }
 
-/** The pendant, drawn small: a vertical pebble with its grille. */
-export function MindGlyph({ className }: { className?: string }) {
+/**
+ * The wali app icon: the whole word on ink, rounded like an iOS icon (brand kit v2 has no symbol or
+ * monogram). Under 40px it uses the kit's small-size artwork, where the word is widened.
+ */
+export function WaliIcon({ className, size = 18 }: { className?: string; size?: number }) {
   return (
-    <svg
-      viewBox="0 0 24 24"
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={size < 40 ? "/brand/wali-icon-small.svg" : "/brand/wali-app-icon.svg"}
+      alt=""
       aria-hidden
-      className={cn("size-5 shrink-0", className)}
-    >
-      <rect width="24" height="24" rx="7" fill="currentColor" />
-      <rect
-        x="8.25"
-        y="4.5"
-        width="7.5"
-        height="15"
-        rx="3.75"
-        fill="none"
-        stroke="var(--glyph-ink, #fff)"
-        strokeWidth="1.4"
-      />
-      <circle cx="12" cy="8.6" r="0.85" fill="var(--glyph-ink, #fff)" />
-    </svg>
+      width={size}
+      height={size}
+      style={{ width: size, height: size }}
+      className={cn("shrink-0 rounded-[22%]", className)}
+    />
   )
 }
 
-export function Wordmark({ className }: { className?: string }) {
+const WORDMARK = {
+  ink: "/brand/wali-wordmark-ink.svg",
+  paper: "/brand/wali-wordmark-paper.svg",
+  white: "/brand/wali-wordmark-white.svg",
+}
+
+/**
+ * The wali wordmark (brand kit v2, Averia Gruesa Libre converted to outlines): always placed from
+ * the kit, never retyped, always one line. Keep it at least 64px wide.
+ */
+export function Wordmark({
+  tone = "ink",
+  alt = "wali",
+  className,
+}: {
+  tone?: keyof typeof WORDMARK
+  alt?: string
+  className?: string
+}) {
   return (
-    <span
-      className={cn(
-        "display inline-flex items-center gap-2 text-[19px] [--display-transform:none]",
-        className
-      )}
-      style={{ letterSpacing: "-0.03em", lineHeight: 1 }}
-    >
-      <MindGlyph className="size-[22px]" />
-      mind
-    </span>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={WORDMARK[tone]}
+      alt={alt}
+      width={322}
+      height={144}
+      className={cn("h-auto w-[72px]", className)}
+    />
   )
 }
 
@@ -58,7 +69,7 @@ type NudgeProps = {
   className?: string
 }
 
-/** A Mind notification, used over photography (Lassie / Fixa pattern). */
+/** A wali notification, used over photography (Lassie / Fixa pattern). */
 export function NudgeCard({ time, children, actions, className }: NudgeProps) {
   return (
     <div
@@ -68,8 +79,8 @@ export function NudgeCard({ time, children, actions, className }: NudgeProps) {
       )}
     >
       <div className="flex items-center gap-2 text-[12px] text-ink-2">
-        <MindGlyph className="size-[18px] text-ink" />
-        <span className="font-medium text-ink">Mind</span>
+        <WaliIcon size={18} />
+        <span className="font-medium text-ink">wali</span>
         <span className="ml-auto tabular-nums">{time}</span>
       </div>
       <p className="mt-2.5 text-[14.5px] leading-[1.45] text-ink">{children}</p>

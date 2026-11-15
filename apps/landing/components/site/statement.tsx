@@ -12,7 +12,7 @@ import {
 import { Container } from "./primitives"
 
 const TEXT =
-  "Your body has had trackers for years. Your mind has had nothing. Mind is a pendant you wear on a cord. It listens through the day, to the conversations, the plans you make out loud and the small things you'd otherwise forget, and turns them into a quiet read on how you're actually doing."
+  "Your body has had trackers for years. Your mind has had nothing. Meet wali, a pendant you wear on a cord. It listens through the day, to the conversations, the plans you make out loud and the small things you'd otherwise forget, and turns them into a quiet read on how you're actually doing."
 
 /** Scroll-scrubbed reading (Waabi): each word fills from faint to ink. */
 export function Statement() {

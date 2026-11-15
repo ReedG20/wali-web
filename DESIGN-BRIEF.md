@@ -1,10 +1,22 @@
-# Mind: design brief
+# wali: design brief
 
-The look and feel shared by every Mind surface: the landing page, the web app and the iOS app. For section-by-section landing notes, see `apps/landing/DESIGN.md`.
+The look and feel shared by every wali surface: the landing page, the web app and the iOS app. For section-by-section landing notes, see `apps/landing/DESIGN.md`.
+
+## Name and logo
+
+Brand kit **v2** (`~/Downloads/wali-brand-kit 2`). Web assets are copied into `apps/landing/public/brand` + `apps/landing/app`, and `apps/app/public/brand` + `apps/app/public`.
+
+- The product is **wali**, always lowercase.
+- **The name is the mark.** There is no symbol and no single-letter monogram. Wherever the brand signs its name, it uses all four letters.
+- **Always one line.** Never stack, wrap or split "wali".
+- **Use the files, never retype it.** The wordmark is Averia Gruesa Libre at −3% tracking, converted to outlines. Averia is reserved for the logo; it is never used for UI or copy.
+- **Colours:** ink on paper is the primary version. Use paper on night and cream on photos. One flat colour only, and never ember.
+- **Clear space** is half the x-height on every side.
+- **Size:** in product UI and the site nav the wordmark is **50px wide**, sized to sit beside 13–14px labels (the kit's 64px minimum is for print and standalone use; we chose smaller on screen). Never below 44px. The app icon (the word on an ink tile) stays clear down to about 40px; below that, use the kit's small-size icon (`favicon.svg`), where the word is widened to fill the square.
 
 ## Aesthetic
 
-Mind should feel **warm, grounded, calm and spacious**. Think of a well-made physical object photographed in late light, not a tech dashboard.
+wali should feel **warm, grounded, calm and spacious**. Think of a well-made physical object photographed in late light, not a tech dashboard.
 
 - **Photography leads.** Large, full-bleed or generously rounded images carry the mood. The interface around them stays quiet.
 - **Quiet over clever.** Every element needs a job. Leave out decorative eyebrows, mono labels, figure captions, dividers, dashed rules and accent borders. Hierarchy comes from type size and space.
@@ -30,6 +42,7 @@ The palette is warm neutrals. There is one accent, and it is used sparingly.
 | `ink-3` | `#9A958B` | Tertiary text, timestamps, inactive list items |
 | `line` | `#161513` at 9% | Only where a boundary is truly needed (input outlines) |
 | `night` | `#12110F` | Dark sections and the footer |
+| `cream` | `#FBF7EE` | Logo and primary buttons on photos |
 | `ember` | `#D27A33` | The single accent. Use it for "live" states (the listening dot, the pendant light) and text selection at 25% |
 
 **Text on dark surfaces and photos:** white at 90% for body text, 75% for secondary and 40% for tertiary.
@@ -98,7 +111,7 @@ The palette is warm neutrals. There is one accent, and it is used sparingly.
   - No outlined buttons.
 - **Inputs:** a pill, with the submit button tucked inside on the right.
 - **Nav:** a floating, centred segmented pill (tinted, blurred). The logo and the active item sit on white chips, and a single ink pill on the right is the call to action.
-- **Notification card:** this is how Mind speaks, and it is the core UI object. It has three parts: a header row (Mind glyph, "Mind", timestamp on the right), one or two sentences of plain, specific text, and up to two pill actions (primary ink, secondary tint).
+- **Notification card:** this is how wali speaks, and it is the core UI object. It has three parts: a header row (wali app icon, "wali", timestamp on the right), one or two sentences of plain, specific text, and up to two pill actions (primary ink, secondary tint).
 - **Approval card:** the same anatomy, with "Needs your OK" in the header and Approve / Edit actions.
 - **Lists that track scroll:** only the active item is full ink; the rest drop to about 20% ink.
 - **Accordion:** separate white cards with a small gap between them, not a bordered stack.

@@ -4,7 +4,7 @@ import ocean from "@/public/images/how-ocean.jpg"
 import birch from "@/public/images/how-birch.jpg"
 import wheat from "@/public/images/how-wheat.jpg"
 import stream from "@/public/images/how-stream.jpg"
-import { Container, MindGlyph } from "./primitives"
+import { Container, WaliIcon } from "./primitives"
 import { Reveal } from "./reveal"
 
 const STEPS: {
@@ -27,7 +27,7 @@ const STEPS: {
   },
   {
     title: "It learns you",
-    body: "Over weeks, Mind builds a picture of your people, goals and habits.",
+    body: "Over weeks, wali builds a picture of your people, goals and habits.",
     img: wheat,
     ui: <MemoryCard />,
   },
@@ -148,7 +148,7 @@ function MemoryCard() {
   ]
   return (
     <UiCard>
-      <p className="text-[12px] text-ink-3">What Mind knows</p>
+      <p className="text-[12px] text-ink-3">What wali knows</p>
       <ul className="mt-3 space-y-2.5">
         {rows.map((r) => (
           <li key={r.k} className="flex items-center justify-between gap-3">
@@ -165,8 +165,8 @@ function ApprovalCard() {
   return (
     <UiCard>
       <div className="flex items-center gap-2 text-[12px] text-ink-2">
-        <MindGlyph className="size-[18px] text-ink" />
-        <span className="font-medium text-ink">Mind</span>
+        <WaliIcon size={18} />
+        <span className="font-medium text-ink">wali</span>
         <span className="ml-auto">Needs your OK</span>
       </div>
       <p className="mt-3 text-[14px] leading-[1.4] font-medium">Book pottery for two, Thursday at 6</p>

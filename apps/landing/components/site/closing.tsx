@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 import lake from "@/public/images/closing-lake.jpg"
-import { Container, MindGlyph } from "./primitives"
+import { Container, Wordmark } from "./primitives"
 import { WaitlistForm } from "./waitlist-form"
 
 /**
@@ -60,9 +60,7 @@ export function Closing() {
         <footer className="relative -mt-[clamp(2rem,5vw,5rem)] mx-2 mb-2 overflow-hidden rounded-[28px] bg-night text-white md:mx-3 md:mb-3 md:rounded-[36px]">
           <Container className="grid gap-12 pt-14 pb-10 md:grid-cols-12 md:pt-20">
             <div className="md:col-span-5">
-              <p className="flex items-center gap-2 text-[15px] font-medium [--glyph-ink:var(--night)]">
-                <MindGlyph className="size-6 text-white" /> Mind
-              </p>
+              <Wordmark tone="paper" className="w-[88px]" />
               <p className="mt-6 max-w-[34ch] text-[15px] leading-[1.6] text-white/60">
                 A pendant that listens through your day and helps you understand it.
                 Made by a small team who wanted one.
@@ -83,16 +81,16 @@ export function Closing() {
               </div>
             </nav>
             <div className="text-[13px] text-white/40 md:col-span-2 md:col-start-11 md:text-right">
-              © {new Date().getFullYear()} Mind
+              © {new Date().getFullYear()} wali
             </div>
           </Container>
-          <p
-            aria-hidden
-            className="display pointer-events-none -mb-[0.24em] px-3 text-center text-[clamp(7rem,30vw,30rem)] text-white/[0.07] select-none"
-            style={{ lineHeight: 0.8, letterSpacing: "-0.05em", textTransform: "none" }}
-          >
-            mind
-          </p>
+          <div aria-hidden className="pointer-events-none flex justify-center px-6 select-none md:px-10">
+            <Wordmark
+              tone="white"
+              alt=""
+              className="-mb-[3%] w-full max-w-[1100px] opacity-[0.07]"
+            />
+          </div>
         </footer>
       </div>
     </>

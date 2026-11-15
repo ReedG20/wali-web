@@ -1,4 +1,4 @@
-# Mind landing: design notes
+# wali landing: design notes
 
 Run `bun run dev` from `web/`, or `bunx next dev -p 3100` from here.
 
@@ -22,7 +22,7 @@ Every headline uses the `.display` class (`app/landing.css`), so retuning the fa
 - **Statement:** a paragraph whose words fill from faint to ink as you scroll ([Waabi](https://mobbin.com/sites/sections/d53933f1-ffc4-49f0-835e-c69ad731aab2)).
 - **Pendant:** one product photo with the details beside it ([Daylight DC-1](https://mobbin.com/sites/sections/89ed61e7-de0b-49f4-ab94-b5a54d43cc7a)), and a two-tone headline ([Fixa](https://mobbin.com/sites/sections/920d0adb-7d8b-4531-9659-faa024c815f8)).
 - **How it works:** long-exposure nature photos, each carrying one small piece of the real interface: listening, a transcript, memory and an approval ([Lassie](https://mobbin.com/sites/sections/310955c5-6f5c-44eb-bb3c-ca0362b77008) for both the cards and the working card over a blurred photo).
-- **Moments:** a sticky list where only the active line is in ink ([TinyWins](https://mobbin.com/sites/sections/4a062c21-fa0d-47a8-a21b-70c2736b1cf0)), next to photos with Mind notifications ([Lassie](https://mobbin.com/sites/sections/926d3a62-6a96-40d0-9c46-4965679df3c7), [Fixa](https://mobbin.com/sites/sections/3b3c2b66-b096-4752-aa90-29d318ec9568)).
+- **Moments:** a sticky list where only the active line is in ink ([TinyWins](https://mobbin.com/sites/sections/4a062c21-fa0d-47a8-a21b-70c2736b1cf0)), next to photos with wali notifications ([Lassie](https://mobbin.com/sites/sections/926d3a62-6a96-40d0-9c46-4965679df3c7), [Fixa](https://mobbin.com/sites/sections/3b3c2b66-b096-4752-aa90-29d318ec9568)).
 - **Interstitial:** a long-exposure still that opens up to the page edge as you scroll ([Joby Aviation](https://mobbin.com/sites/sections/a08c6ac3-f624-4958-8d27-e175e0b8688d) caption placement).
 - **Privacy:** a motion-blurred forest as the background, tabs, and a white card ([Unify](https://mobbin.com/sites/sections/571e65ed-4308-4480-80f0-a7bfae6f2ed5)).
 - **FAQ:** separate white question cards on paper ([Lassie](https://mobbin.com/sites/sections/16821f81-24d8-4b62-8db0-f23c5ecb31a8)).

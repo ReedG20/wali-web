@@ -13,7 +13,7 @@ const TABS = [
     id: "you",
     label: "For you",
     big: "Yours, not ours.",
-    lede: "What Mind hears is the most personal data there is. It's built so you stay in charge of it, every day.",
+    lede: "What wali hears is the most personal data there is. It's built so you stay in charge of it, every day.",
     points: [
       {
         title: "Silence stays silent",
@@ -33,7 +33,7 @@ const TABS = [
     id: "others",
     label: "For people around you",
     big: "Worn in plain sight.",
-    lede: "Mind is for understanding your own day, so it's designed to be obvious and easy to stop.",
+    lede: "wali is for understanding your own day, so it's designed to be obvious and easy to stop.",
     points: [
       {
         title: "Visible on purpose",
@@ -45,7 +45,7 @@ const TABS = [
       },
       {
         title: "No profiles of others",
-        body: "What others say only helps Mind understand your day. It never builds a file on them.",
+        body: "What others say only helps wali understand your day. It never builds a file on them.",
       },
     ],
   },

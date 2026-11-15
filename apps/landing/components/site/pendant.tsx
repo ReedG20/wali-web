@@ -15,7 +15,7 @@ const SPECS = [
   },
   {
     title: "Knows who's talking",
-    body: "Conversations are sorted by speaker, so Mind can tell what you said from what you heard.",
+    body: "Conversations are sorted by speaker, so wali can tell what you said from what you heard.",
   },
   {
     title: "One press to pause",
@@ -35,7 +35,7 @@ export function Pendant() {
         <Reveal className="relative aspect-[4/5] overflow-hidden rounded-[28px] bg-[#e4dfd6] md:col-span-7 md:rounded-[36px]">
           <Image
             src={studio}
-            alt="The Mind pendant: a black anodized pebble with a small round microphone grille, hanging from a braided cord."
+            alt="The wali pendant: a black anodized pebble with a small round microphone grille, hanging from a braided cord."
             fill
             placeholder="blur"
             sizes="(min-width: 768px) 58vw, 100vw"

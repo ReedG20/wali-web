@@ -41,7 +41,7 @@ export function Interstitial() {
             The day won&rsquo;t slow down. <em className="block">You can still notice it.</em>
           </h2>
           <p className="max-w-[34ch] self-end text-[15px] leading-[1.6] text-white/80 md:col-span-4 md:col-start-9">
-            Mind doesn&rsquo;t make life quieter. It keeps the parts that mattered,
+            wali won&rsquo;t make life quieter. It keeps the parts that mattered,
             and hands them back when they&rsquo;re useful.
           </p>
         </div>

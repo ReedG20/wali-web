@@ -18,8 +18,8 @@ const FAQS = [
     a: "No. If your phone is out of range, the pendant holds on to what it hears and catches up the moment you're back together.",
   },
   {
-    q: "What does Mind do with what it hears?",
-    a: "Conversations become private transcripts, sorted by speaker. Mind reads them to learn your people, plans and patterns, then turns that into a few well-timed nudges.",
+    q: "What does wali do with what it hears?",
+    a: "Conversations become private transcripts, sorted by speaker. wali reads them to learn your people, plans and patterns, then turns that into a few well-timed nudges.",
   },
   {
     q: "Will it do things without asking?",

@@ -77,7 +77,7 @@ const MOMENTS: Moment[] = [
 
 /**
  * Sticky numbered list where only the active line is full ink (TinyWins),
- * beside tall photographs that each carry a real Mind nudge (Lassie's UI
+ * beside tall photographs that each carry a real wali nudge (Lassie's UI
  * cards over photography).
  */
 export function Moments() {

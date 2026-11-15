@@ -4,13 +4,13 @@ import "./landing.css"
 import { fontVariables } from "./fonts"
 
 export const metadata: Metadata = {
-  title: "Mind: a Fitbit for your mind",
+  title: "wali: a Fitbit for your mind",
   description:
-    "Mind is a small pendant that listens through your day and helps you see who lifts you up, what wears you down, and what you said you'd do.",
+    "wali is a small pendant that listens through your day and helps you see who lifts you up, what wears you down, and what you said you'd do.",
 }
 
 export const viewport: Viewport = {
-  themeColor: "#f6f4ef",
+  themeColor: "#F6F4EF",
 }
 
 export default function RootLayout({

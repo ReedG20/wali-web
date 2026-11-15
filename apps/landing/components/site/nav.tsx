@@ -47,10 +47,12 @@ export function Nav() {
       <nav className="pointer-events-auto flex items-center gap-0.5 rounded-full bg-[#e8e5de]/80 p-1 shadow-[0_10px_30px_-14px_rgba(0,0,0,0.35)] ring-1 ring-black/[0.06] backdrop-blur-xl backdrop-saturate-150">
         <a
           href="#top"
-          aria-label="Mind, back to top"
-          className="flex h-9 items-center rounded-full bg-white px-3.5 text-ink shadow-[0_1px_2px_rgba(0,0,0,0.06)]"
+          aria-label="wali, back to top"
+          className="flex h-11 items-center rounded-full pr-3 pl-4"
         >
-          <Wordmark className="text-[18px]" />
+          {/* 50px: sized to sit with the 13.5px nav labels (below the kit's 64px print minimum, by
+              choice). Nudged up so the letters' bodies, not the tall l and dot, sit on the centre line. */}
+          <Wordmark alt="" className="w-[50px] -translate-y-[1.5px]" />
         </a>
         <ul className="hidden items-center gap-0.5 md:flex">
           {LINKS.map((l) => (
@@ -58,7 +60,7 @@ export function Nav() {
               <a
                 href={`#${l.id}`}
                 className={cn(
-                  "flex h-9 items-center rounded-full px-3.5 text-[13.5px] text-ink-2 transition-colors duration-300 hover:text-ink",
+                  "flex h-11 items-center rounded-full px-4 text-[13.5px] text-ink-2 transition-colors duration-300 hover:text-ink",
                   active === l.id &&
                     "bg-white text-ink shadow-[0_1px_2px_rgba(0,0,0,0.06)]"
                 )}
@@ -70,7 +72,7 @@ export function Nav() {
         </ul>
         <a
           href="#waitlist"
-          className="ml-1 flex h-9 items-center rounded-full bg-ink px-4 text-[13.5px] font-medium text-white transition-transform active:translate-y-px"
+          className="ml-1 flex h-11 items-center rounded-full bg-ink px-5 text-[13.5px] font-medium text-white transition-transform active:translate-y-px"
         >
           Join the waitlist
         </a>
