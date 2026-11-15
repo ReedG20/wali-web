@@ -15,7 +15,7 @@ export const PERMISSION_MODES: { id: PermissionMode; title: string; summary: str
     id: "balanced",
     title: "Ask for what matters",
     summary: "Reading and small private changes happen on their own. Anything that reaches other people, spends money or deletes waits for you.",
-    examples: "On its own: reading email, a draft, a label, an event with no guests. Waits: sending, inviting, deleting, paying, anything in Slack or GitHub.",
+    examples: "On its own: reading email, looking something up on a site, a draft, a label, an event with no guests. Waits: sending, inviting, deleting, paying, anything in Slack or GitHub.",
   },
   {
     id: "auto",

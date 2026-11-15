@@ -10,16 +10,17 @@ import {
   Link04Icon,
   Note01Icon,
   Search01Icon,
-  Tick02Icon,
   Wrench01Icon,
 } from "@hugeicons/core-free-icons"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@workspace/ui/components/collapsible"
 import { Spinner } from "@workspace/ui/components/spinner"
 import { cn } from "@workspace/ui/lib/utils"
 import type { ToolPart } from "@/lib/types"
+import { ConnectCard } from "./connect-card"
 
 const LABELS: Record<string, { icon: typeof Wrench01Icon; running: string; done: string }> = {
   search_memory: { icon: Search01Icon, running: "Searching your conversations", done: "Searched your conversations" },
+  search_transcripts: { icon: Search01Icon, running: "Searching transcripts", done: "Searched transcripts" },
   recent_conversations: { icon: Note01Icon, running: "Reading recent conversations", done: "Read recent conversations" },
   save_note: { icon: Note01Icon, running: "Saving a note", done: "Saved a note" },
   schedule_followup: { icon: Clock01Icon, running: "Scheduling a follow-up", done: "Scheduled a follow-up" },
@@ -42,9 +43,21 @@ function detail(tool: ToolPart) {
     return slug
   }
   if (tool.toolName === "search_memory") return args?.query ? `“${String(args.query)}”` : ""
+  // The backend skips a note that repeats a recent one word for word.
+  if (tool.toolName === "save_note" && res?.saved === false) return "already saved"
   if (tool.toolName === "schedule_followup") return res?.scheduledFor ? `for ${String(res.scheduledFor)}` : ""
   if (tool.toolName === "browser_task" && res?.status === "awaiting_approval") return "waiting for your OK"
   return ""
+}
+
+/**
+ * An ask, or a browser task that has started, already has a row of its own right below the reply
+ * (ApprovalRow / BrowserTaskRow). Showing the tool chip as well would say the same thing twice.
+ */
+export function isToolVisible(tool: ToolPart) {
+  const status = asRecord(tool.result)?.status
+  if (status === "awaiting_approval") return false
+  return !(tool.toolName === "browser_task" && status === "running")
 }
 
 /** A quiet, collapsible row for each tool wali used (Zapier-style action rows, toned down). */
@@ -53,6 +66,9 @@ export function ToolCall({ tool }: { tool: ToolPart }) {
   const res = asRecord(tool.result)
   const connectUrl = tool.toolName === "connect_app" && typeof res?.connectUrl === "string" ? res.connectUrl : null
   const d = detail(tool)
+
+  // A connect link is something to act on, not a log line: it gets a card of its own.
+  if (connectUrl) return <ConnectCard toolkit={String(res?.toolkit ?? "")} url={connectUrl} />
 
   return (
     <div className="my-1.5">
@@ -82,17 +98,6 @@ export function ToolCall({ tool }: { tool: ToolPart }) {
           </pre>
         </CollapsibleContent>
       </Collapsible>
-      {connectUrl && (
-        <a
-          href={connectUrl}
-          target="_blank"
-          rel="noreferrer"
-          className={cn("mt-2 inline-flex h-9 items-center gap-2 rounded-full bg-ink px-4 text-[13px] font-medium text-white")}
-        >
-          <HugeiconsIcon icon={Tick02Icon} className="size-4" />
-          Connect {String(res?.toolkit ?? "app")}
-        </a>
-      )}
     </div>
   )
 }
